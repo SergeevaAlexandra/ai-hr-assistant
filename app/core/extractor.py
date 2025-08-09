@@ -40,7 +40,7 @@ def extract_personal_info(text: str) -> PersonalInfo:
         clean_json = clean_model_output(raw_response)
         data = PersonalInfo.model_validate_json(clean_json)
 
-        return clean_json
+        return data.model_dump()
     
     except json.JSONDecodeError:
         raise ValueError(f"Невалидный JSON: {clean_json}")
