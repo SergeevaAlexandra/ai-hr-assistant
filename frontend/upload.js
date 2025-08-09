@@ -3,17 +3,14 @@ const fileInput = document.getElementById('fileInput');
 const chooseFileBtn = document.getElementById('chooseFileBtn');
 const uploadStatus = document.getElementById('upload-status');
 
-// Открыть диалог выбора файла
 chooseFileBtn.addEventListener('click', () => fileInput.click());
 
-// При выборе файла
 fileInput.addEventListener('change', () => {
   if (fileInput.files.length > 0) {
     uploadFile(fileInput.files[0]);
   }
 });
 
-// Drag & Drop события
 dropArea.addEventListener('dragover', (e) => {
   e.preventDefault();
   dropArea.classList.add('dragover');
@@ -29,9 +26,10 @@ dropArea.addEventListener('drop', (e) => {
   }
 });
 
-// Отправка файла на backend
 async function uploadFile(file) {
   uploadStatus.classList.remove('hidden');
+  uploadStatus.textContent = "Загрузка...";
+
   let formData = new FormData();
   formData.append("file", file);
 
@@ -41,7 +39,9 @@ async function uploadFile(file) {
   });
 
   let data = await response.json();
-  uploadStatus.textContent = "Файл загружен и проанализирован ✅";
 
-  console.log("Результат анализа:", data);
+  localStorage.setItem("resumeAnalysis", JSON.stringify(data.result));
+
+  window.location.href = "result.html";
+
 }
