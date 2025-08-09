@@ -1,4 +1,4 @@
-from core.parser import extract_personal_info
+from app.core.extractor import extract_personal_info
 
 if __name__ == "__main__":
     sample_text = """
