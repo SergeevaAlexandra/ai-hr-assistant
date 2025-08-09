@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HR Assistant — Анализ резюме</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">💼 HR Assistant</div>
+    <nav>
+      <a href="#">Дашборд</a>
+      <a href="#">Кандидаты</a>
+      <a href="#" class="active">Анализ резюме</a>
+      <a href="#">Транскрибация</a>
+    </nav>
+    <div class="profile">HR</div>
+  </header>
+
+  <main class="main">
+    <h1>Анализ резюме</h1>
+    <p class="subtitle">Загрузите резюме для автоматического анализа с помощью ИИ</p>
+
+    <div id="drop-area" class="drop-area">
+      <div class="upload-icon">📄</div>
+      <p>Перетащите резюме сюда<br><span>или нажмите для выбора файла</span></p>
+      <small>Поддерживаются форматы: PDF, DOC, DOCX</small>
+      <input type="file" id="fileInput" accept=".pdf,.doc,.docx" hidden>
+      <button id="chooseFileBtn">Выбрать файл</button>
+    </div>
+
+    <div id="upload-status" class="hidden">Загрузка...</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

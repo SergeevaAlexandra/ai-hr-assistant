@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  margin: 0;
+  padding: 0;
+  color: #111827;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header .logo {
+  font-weight: bold;
+}
+
+.header nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #374151;
+}
+
+.header nav a.active {
+  color: white;
+  background: #2563eb;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.header .profile {
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  padding: 8px 12px;
+}
+
+.main {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.subtitle {
+  color: #6b7280;
+}
+
+.drop-area {
+  margin-top: 20px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.drop-area.dragover {
+  background: #e0f2fe;
+  border-color: #2563eb;
+}
+
+.drop-area .upload-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.drop-area button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
